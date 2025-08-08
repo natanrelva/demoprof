@@ -1,22 +1,17 @@
-// Portfólio estilo "Art Deco" com visual sofisticado e profissional
-// Stack: React + Tailwind + shadcn/ui + Framer Motion
-
 import { motion } from 'framer-motion'
-// import { Button } from '@/components/ui/button'
+import { Button } from './components/atoms/Button'
+import { MainHeader } from './components/atoms/Header'
+import { MainFooter } from './components/atoms/Footer'
 
 export default function Portfolio() {
-
   const username = "Natã Relva"
   
   return (
     <div className="bg-[#f4f1ee] min-h-screen text-[#2e2e2e] font-serif">
-      {/* Header com tipografia art deco */}
-      <header className="text-center py-16 border-b border-[#d1cfc8]">
-        <h1 className="text-5xl tracking-[0.2em] uppercase">{username}</h1>
-        <p className="mt-4 text-lg italic">Desenvolvedor Front-End & Criador de Experiências Digitais</p>
-      </header>
-
-      {/* Sessão de projetos */}
+      <MainHeader 
+        name={username} 
+        description="Desenvolvedor Front-End & Criador de Experiências Digitais" 
+      />
       <main className="max-w-5xl mx-auto py-16 px-6">
         <section className="mb-24">
           <h2 className="text-3xl mb-8 uppercase border-b pb-2 border-[#d1cfc8]">Projetos</h2>
@@ -49,16 +44,14 @@ export default function Portfolio() {
           <h2 className="text-3xl mb-6 uppercase border-b pb-2 border-[#d1cfc8]">Contato</h2>
           <p className="mb-6 text-lg">Entre em contato através do e-mail ou redes sociais:</p>
           <div className="flex justify-center gap-6">
-            {/* <Button variant="outline">LinkedIn</Button>
-            <Button variant="outline">GitHub</Button>
-            <Button variant="outline">Email</Button> */}
+            <Button label="LinkedIn"></Button>
+            <Button label="GitHub"></Button>
+            <Button label="Email"></Button>
           </div>
         </section>
       </main>
 
-      <footer className="text-center py-10 border-t border-[#d1cfc8] text-sm">
-        <p>&copy; 2025 - Desenvolvido por Seu Nome</p>
-      </footer>
+      <MainFooter/>
     </div>
   )
 }

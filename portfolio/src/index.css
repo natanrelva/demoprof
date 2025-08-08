@@ -1,8 +1,9 @@
-@import "tailwindcss";
-
-/* Fonte Art Deco */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+@import "tailwindcss";
 
 html, body {
   scroll-behavior: smooth;
+  background-color: #f4f1ee;
+  color: #2e2e2e;
+  font-family: 'Cinzel', serif;
 }
